@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Todo List</title>
+</head>
+
+<body>
+    <div class="board">
+        <!-- todo form -->
+        <form id="todo-form">
+            <input type="text" name="" id="todo-input" placeholder="New Todo..." />
+            <button>Add</button>
+        </form>
+
+        <!-- todo lanes -->
+        <div class="lanes">
+            <!-- todo -->
+            <div class="swim-lane" id="todo-lane">
+                <h3 class="heading">TODO</h3>
+                <p class="task" draggable="true">Meet friends <span class="delete-btn">&#x2715;</span></p>
+                <p class="task" draggable="true">Watch The Super Mario Bros. <span class="delete-btn">&#x2715;</span>
+                </p>
+                <p class="task" draggable="true">Eat Popcorn <span class="delete-btn">&#x2715;</span></p>
+            </div>
+            <!-- doing -->
+            <div class="swim-lane">
+                <h3 class="heading">Doing</h3>
+                <p class="task" draggable="true">Study <span class="delete-btn">&#x2715;</span></p>
+                <p class="task" draggable="true">Read books <span class="delete-btn">&#x2715;</span></p>
+            </div>
+            <!-- done -->
+            <div class="swim-lane">
+                <h3 class="heading">Done</h3>
+                <p class="task" draggable="true">Eat lunch <span class="delete-btn">&#x2715;</span></p>
+                <p class="task" draggable="true">Cook <span class="delete-btn">&#x2715;</span></p>
+                <p class="task" draggable="true">Go to gym <span class="delete-btn">&#x2715;</span></p>
+            </div>
+        </div>
+
+    </div>
+    <script src="todo.js"></script>
+    <script src="drag.js"></script>
+</body>
+
+</html>
