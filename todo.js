@@ -1,7 +1,7 @@
 const form = document.querySelector('#todo-form');
 const input = document.querySelector("#todo-input");
 const todoLane = document.querySelector("#todo-lane");
-let deleteBtns = document.querySelectorAll(".delete-btn");
+// let deleteBtns = document.querySelectorAll(".delete-btn");
 const tasks = document.querySelectorAll(".task");
 
 // add new todo
@@ -29,18 +29,29 @@ form.addEventListener('submit', (e) => {
     newTask.addEventListener("dragend", () => {
         newTask.classList.remove("is-dragging");
     })
-    deleteBtns = document.querySelectorAll(".delete-btn");
-    deleteTasks();
+
+    //이벤트 위임을 사용하면 이런거 안해도 됨
+    // deleteBtns = document.querySelectorAll(".delete-btn");
+    // deleteTasks();
 
     input.value = '';
 })
 
+const lanes = document.querySelector(".lanes");
+lanes.addEventListener("click", (event => {
+    const deleteBtn = event.target.closest('span')
+    if (deleteBtn) {
+        deleteBtn.parentNode.remove();
+    }
+}))
+
+//이벤트 위임을 사용하면 이런거 안해도 됨
 //delete todo
-const deleteTasks = () => {
-    deleteBtns.forEach((deleteBtn) => {
-        deleteBtn.addEventListener("click", () => {
-            deleteBtn.parentNode.remove();
-        })
-    })
-}
-deleteTasks();
+// const deleteTasks = () => {
+//     deleteBtns.forEach((deleteBtn) => {
+//         deleteBtn.addEventListener("click", () => {
+//             deleteBtn.parentNode.remove();
+//         })
+//     })
+// }
+// deleteTasks();
