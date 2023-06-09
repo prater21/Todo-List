@@ -1,5 +1,5 @@
 # Todo-List
-simple kanban board todo List using vanlia JS
+Simple kanban board todo List using Javascript
 
 ### [>>site](https://prater21.github.io/Todo-List/)
 
